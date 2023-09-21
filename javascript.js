@@ -1,35 +1,27 @@
-
-
-// getComputerChoice function that randomly returns Rock, paper or scissors
-
-
-let computerSelection
-let randomNumber
-
 function getRandomNumber () {
-  randomNumber = Math.ceil(Math.random() * 3);
-  return randomNumber;
+  return Math.ceil(Math.random() * 3);
 }
 
-console.log(randomNumber)
-
-function getComputerChoice () {
-  let randomNumber = Math.ceil(Math.random() * 3);
-    if (randomNumber === 1) {
-      let computerSelection = "rock";
+function getComputerChoice (randomNumber) {
+  let choice  
+  if (randomNumber === 1) {
+      choice = "rock";
     } else if (randomNumber === 2) {
-      computerSelection = "paper"
+      choice = "paper"
     } else if (randomNumber === 3) {
-      computerSelection = "scissors"
+      choice = "scissors"
     }
-   return (computerSelection,randomNumber);
+   return choice;
 }
 
+playerSelection = prompt ("What is your choice?").toLowerCase;
 
-console.log(getComputerChoice())
-console.log(computerSelection)
 
-// output with console.log
+const randomNumber = getRandomNumber();
+const computerSelection = getComputerChoice(randomNumber);
+console.log(computerSelection);
+console.log(playerSelection);
+
 // function that plays a single round of RPS which takes two parameters: playerSelection and computerSelection and returns string declaring winner like so "You Lose! Paper beats Rock"
 // Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
 
