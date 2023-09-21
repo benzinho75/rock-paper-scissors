@@ -1,5 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
+let numRounds = 5;
 
 function getComputerChoice () {
   let randomNumber = Math.ceil(Math.random() * 3)
@@ -33,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game () {
-  for (let i = 0; i < 5 ; i++) { 
+  for (let i = 0; i < numRounds ; i++) { 
     const computerSelection = getComputerChoice();
     const playerSelection = prompt("What is your choice?").toLowerCase();
     console.log(computerSelection);
